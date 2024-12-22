@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Puzzle Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Word Puzzle Adventure</h1>
+        
+        <!-- Theme Selection Page -->
+        <div class="theme-selection">
+            <h3>Choose your theme</h3>
+            <button class="theme-button" id="fruits">Fruits</button>
+            <button class="theme-button" id="animals">Animals</button>
+            <button class="theme-button" id="colors">Colors</button>
+        </div>
+
+        <!-- Game Info (Progress, Level) -->
+        <div class="game-info">
+            <p id="story">Choose a theme to start the adventure!</p>
+            <p>Level: <span id="level">1</span></p>
+            <p>Score: <span id="score">0</span></p>
+        </div>
+
+        <!-- Puzzle Container -->
+        <div class="puzzle-container">
+            <h3 id="puzzle">Unscramble the word:</h3>
+            <div id="word-puzzle"></div>
+            <input type="text" id="answer" placeholder="Enter your answer">
+            <button id="submit-answer">Submit</button>
+            <div id="message"></div>
+            <button id="hint-button" style="display: none;">Hint</button>
+        </div>
+
+        <!-- Controls (Back, Home) -->
+        <div class="controls">
+            <button id="home-button" style="display: none;">Home</button>
+            <button id="previous-level" style="display: none;">Back</button>
+        </div>
+
+        <!-- Progress Bar (Hidden on Home) -->
+        <div class="progress">
+            <p>Progress: <span id="progress">0</span>%</p>
+        </div>
+
+        <!-- Celebration Pop-up -->
+        <div id="celebration-popup" class="popup" style="display:none;">
+            <div class="popup-content">
+                <h3>Congratulations! You completed all puzzles!</h3>
+                <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="celebration" />
+                <button id="home-button-popup">Go Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/1600x900/?puzzle,game');
+    background-size: cover;
+    background-position: center;
+    transition: background-color 0.3s ease;
+}
+
+.game-container {
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-family: 'Lobster', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.theme-selection, .game-info, .puzzle-container, .controls, .progress {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* Center Buttons */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    width: 120px;
+}
+
+/* Theme Buttons */
+button.theme-button {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+button.theme-button:hover {
+    background-color: #45a049;
+}
+
+/* Puzzle Box */
+#word-puzzle {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+#answer {
+    padding: 12px;
+    font-size: 1.2rem;
+    width: 85%;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+#answer:focus {
+    border-color: #007bff;
+}
+
+#message {
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+
+.progress {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* Dynamic Themes */
+.fruits {
+    background-color: #ffe0e0;
+    color: #ff6347;
+}
+
+.animals {
+    background-color: #f0f8ff;
+    color: #20b2aa;
+}
+
+.colors {
+    background-color: #fff8dc;
+    color: #ff6347;
+}
+
+#celebration-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+}
+
+.popup-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#celebration-popup img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+}
+
+/* Home Button Styling */
+#home-button, #home-button-popup {
+    background-color: #f44336;
+    color: white;
+}
+
+#home-button:hover, #home-button-popup:hover {
+    background-color: #d32f2f;
+}
+
+/* Puzzle Hint Button */
+#hint-button {
+    background-color: #ffa500;
+    color: white;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#hint-button:hover {
+    background-color: #ff8c00;
+}
+
+/* Back Button */
+#previous-level {
+    background-color: #007bff;
+    color: white;
+    width: 200px;
+    margin-top: 20px;
+}
+
+#previous-level:hover {
+    background-color: #0056b3;
+}
